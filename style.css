@@ -1,0 +1,20 @@
+.jumbotron{
+background-color: black;
+color: white;
+}
+body{
+background-color: #ADE8EF;
+}
+
+.container{
+background-color: white;
+padding-bottom : 50px;
+padding-left : 50px;
+padding-right : 50px;
+padding-top : 50px;
+margin-bottom: 50px;
+margin-top: 50px;
+}
+.bg1{
+box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2), 10px 10px 20px 10px rgba(0, 0, 0, 0.19);
+)

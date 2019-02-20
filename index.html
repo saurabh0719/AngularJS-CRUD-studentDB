@@ -1,0 +1,76 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<title>CRUD project</title>  
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> 
+
+<link rel="stylesheet" href="style.css">
+ 
+</head>  
+<body>  
+
+<div class="continer-fluid jumbotron text-center">
+<h1> Basic CRUD application using AngularJS </h1>
+</div>
+
+<div ng-app="myApp" data-ng-controller="newControl">
+
+<div class="container bg1">
+<br>
+<span>Click here for instructions : <button type="submit" data-ng-click="userinstruct()" class="btn btn-info">Instructions</button>
+<br><br>
+
+<table class="table table-striped text-center">
+
+<!--<tr><td>Id no.</td><td>{{ student.id }}</td></tr> -->
+<tr><td>Name.</td><td><input type="text" data-ng-model="student.name"></td></tr>
+<tr><td>College.</td><td><input type="text" data-ng-model="student.college"></td></tr>
+
+</table>
+
+<br><br>
+ <div class="col-sm-offset-4 col-sm-8">
+<button type="submit" data-ng-click="adddata()" class="btn btn-success">Save</button>
+<button type="submit" data-ng-click="viewdata()" class="btn btn-warning">View</button>
+<button type="submit" data-ng-click="updatedata()" class="btn btn-primary">Update</button>
+</div>
+</div>
+
+<div class="container bg1" id="toggleDiv">
+<br>
+<span>Search: <input type="text" data-ng-model="searchfilter"></span>
+<br><br>
+<table class="table table-striped">
+<tr><th>ID no.</th>
+<th><button class="btn" data-ng-click="orderByMe('name')">Name</button></th>
+<th><button class="btn" data-ng-click="orderByMe('college')">College</button></th>
+<th></th>
+<th></th></tr>
+<tr data-ng-repeat="x in studentlist | filter:searchfilter | orderBy:myOrderBy"><td>{{ x.id }}</td>
+<td>{{ x.name }}</td>
+<td>{{ x.college }}</td>
+<td><button type="submit" data-ng-click="deletedata(x)" class="btn btn-danger">delete</button</td>
+<td><button type="submit" data-ng-click="bindchosendata(x)" class="btn btn-info">Select</button</td></tr>
+
+</table>
+</div>
+</div>
+	<div class="container-fluid" style="margin: 0px; padding-top: 3em; padding-bottom: 3em; background-color: black; margin-top: 0px;">
+	<!-- copyright -->
+		<p><center>© 2018 Registration Form. All rights reserved | Design by Saurabh Pujari</center></p>
+	</div>
+
+	<script src="main.js"></script>
+
+</body>  
+</html> 
