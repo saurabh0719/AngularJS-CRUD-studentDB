@@ -6,7 +6,10 @@ app.controller("newControl", function($scope)
 	{
 	  id: 0,
 	  name: ' ',
-	  college: ' '
+	  college: ' ',
+	  email: ' ',
+	  dept: ' ',
+	  phone: ' '
 	  };
 	
 	
@@ -15,7 +18,10 @@ app.controller("newControl", function($scope)
 	  var newdata = {
 	    id: $scope.studentlist.length +1,
 		name: $scope.student.name,
-		college: $scope.student.college
+		college: $scope.student.college,
+		email: $scope.student.email,
+		dept: $scope.student.dept,
+		phone: $scope.student.phone
 		};
 	  $scope.studentlist.push(newdata);
 	  cleardata();
@@ -27,6 +33,9 @@ app.controller("newControl", function($scope)
 	    $scope.student.id = 0;
 		$scope.student.name= ' ';
 		$scope.student.college=' ';
+		$scope.student.email=' ';
+		$scope.student.dept=' ';
+		$scope.student.phone=' ';
 		}
 		
 	$scope.deletedata = function(x)	
@@ -40,6 +49,9 @@ app.controller("newControl", function($scope)
 	    $scope.student.id = x.id;
 		$scope.student.name= x.name;
 		$scope.student.college=x.college;
+		$scope.student.email=x.email;
+		$scope.student.dept=x.dept;
+		$scope.student.phone=x.phone;
 		}
 
 	$scope.updatedata = function () {  
@@ -47,6 +59,9 @@ app.controller("newControl", function($scope)
         if (e.id == $scope.student.id) {  
             e.name = $scope.student.name;  
             e.college = $scope.student.college;  
+			e.email = $scope.student.email;
+			e.dept = $scope.student.dept;
+			e.phone = $scope.student.phone;
         }  });
 		cleardata(); }
 		
