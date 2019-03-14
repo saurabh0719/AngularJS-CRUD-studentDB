@@ -35,6 +35,9 @@
 <!--<tr><td>Id no.</td><td>{{ student.id }}</td></tr> -->
 <tr><td>Name.</td><td><input type="text" data-ng-model="student.name"></td></tr>
 <tr><td>College.</td><td><input type="text" data-ng-model="student.college"></td></tr>
+<tr><td>Email.</td><td><input type="email" data-ng-model="student.email"></td></tr>
+<tr><td>Department.</td><td><input type="text" data-ng-model="student.dept"></td></tr>
+<tr><td>Phone number</td><td><input type="text" data-ng-model="student.phone"></td></tr>
 
 </table>
 
@@ -54,11 +57,17 @@
 <tr><th>ID no.</th>
 <th><button class="btn" data-ng-click="orderByMe('name')">Name</button></th>
 <th><button class="btn" data-ng-click="orderByMe('college')">College</button></th>
+<th><button class="btn" data-ng-click="orderByMe('email')">Email</button></th>
+<th><button class="btn" data-ng-click="orderByMe('dept')">Department</button></th>
+<th><button class="btn" data-ng-click="orderByMe('phone')">Phone no.</button></th>
 <th></th>
 <th></th></tr>
 <tr data-ng-repeat="x in studentlist | filter:searchfilter | orderBy:myOrderBy"><td>{{ x.id }}</td>
 <td>{{ x.name }}</td>
 <td>{{ x.college }}</td>
+<td>{{ x.email }}</td>
+<td>{{ x.dept }}</td>
+<td>{{ x.phone }}</td>
 <td><button type="submit" data-ng-click="deletedata(x)" class="btn btn-danger">delete</button</td>
 <td><button type="submit" data-ng-click="bindchosendata(x)" class="btn btn-info">Select</button</td></tr>
 
