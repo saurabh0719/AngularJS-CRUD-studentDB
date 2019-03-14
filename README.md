@@ -7,7 +7,7 @@ Performs all the CRUD functions :
 3. Update a record
 4. Delete a record
 
-An extra Sort feature added that can sort by name or college. 
+An extra Sort feature added that can sort the DB based on any of the fields. 
 A simple AngularJS filter is present to search for a specific record.
 
 A php-sql back-end to make it a dynamic DB is pending. 
