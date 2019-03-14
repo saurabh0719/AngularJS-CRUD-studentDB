@@ -81,7 +81,9 @@ app.controller("newControl", function($scope)
        if(x.style.display === "none")
         { var psw = prompt("Enter the password : ");
 		if(psw=="xyz"){
-		x.style.display = "block";}
+		x.style.display = "block";
+		var y = document.getElementById("closeview");
+		y.value="Close View";}
 		else{alert("wrong password!");}}
        else {x.style.display = "none"};
     }	   
