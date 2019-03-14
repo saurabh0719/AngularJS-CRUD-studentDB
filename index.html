@@ -33,18 +33,18 @@
 <table class="table table-striped text-center">
 
 <!--<tr><td>Id no.</td><td>{{ student.id }}</td></tr> -->
-<tr><td>Name.</td><td><input type="text" data-ng-model="student.name"></td></tr>
-<tr><td>College.</td><td><input type="text" data-ng-model="student.college"></td></tr>
-<tr><td>Email.</td><td><input type="email" data-ng-model="student.email"></td></tr>
-<tr><td>Department.</td><td><input type="text" data-ng-model="student.dept"></td></tr>
-<tr><td>Phone number</td><td><input type="text" data-ng-model="student.phone"></td></tr>
+<tr><th class="text-center">Name :</th><td><input type="text" data-ng-model="student.name"></td></tr>
+<tr><th class="text-center">College :</th><td><input type="text" data-ng-model="student.college"></td></tr>
+<tr><th class="text-center">Email :</th><td><input type="email" data-ng-model="student.email"></td></tr>
+<tr><th class="text-center">Department :</th><td><input type="text" data-ng-model="student.dept"></td></tr>
+<tr><th class="text-center">Phone number :</th><td><input type="text" data-ng-model="student.phone"></td></tr>
 
 </table>
 
 <br><br>
  <div class="col-sm-offset-4 col-sm-8">
 <button type="submit" data-ng-click="adddata()" class="btn btn-success">Save</button>
-<button type="submit" data-ng-click="viewdata()" class="btn btn-warning">View</button>
+<input type="submit" id = "closeview" value="View" data-ng-click="viewdata()" class="btn btn-warning"></input>
 <button type="submit" data-ng-click="updatedata()" class="btn btn-primary">Update</button>
 </div>
 </div>
