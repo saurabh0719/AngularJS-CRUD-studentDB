@@ -11,8 +11,8 @@ app.controller("newControl", function($scope)
 	  dept: ' ',
 	  phone: ' '
 	  };
-	
-	
+
+
 	$scope.adddata = function()
 	{
 	  var newdata = {
@@ -27,7 +27,7 @@ app.controller("newControl", function($scope)
 	  cleardata();
 	  alert("Record added");
 	  }
-	  
+
 	  function cleardata()
 	  {
 	    $scope.student.id = 0;
@@ -37,13 +37,13 @@ app.controller("newControl", function($scope)
 		$scope.student.dept=' ';
 		$scope.student.phone=' ';
 		}
-		
-	$scope.deletedata = function(x)	
-	{ 
+
+	$scope.deletedata = function(x)
+	{
 	  var index = $scope.studentlist.indexOf(x);
 	  $scope.studentlist.splice(index,1);
 	  }
-	  
+
 	$scope.bindchosendata= function(x)
 	{
 	    $scope.student.id = x.id;
@@ -54,43 +54,45 @@ app.controller("newControl", function($scope)
 		$scope.student.phone=x.phone;
 		}
 
-	$scope.updatedata = function () {  
-    $.grep($scope.studentlist, function (e) {  
-        if (e.id == $scope.student.id) {  
-            e.name = $scope.student.name;  
-            e.college = $scope.student.college;  
+	$scope.updatedata = function () {
+    $.grep($scope.studentlist, function (e) {
+        if (e.id == $scope.student.id) {
+            e.name = $scope.student.name;
+            e.college = $scope.student.college;
 			e.email = $scope.student.email;
 			e.dept = $scope.student.dept;
 			e.phone = $scope.student.phone;
         }  });
 		cleardata(); }
-		
+
 	//$scope.chooseorder = function(x)
 	//{
 	  // $scope.neworder = x;
 	  // }
-		
+
 	$scope.orderByMe = function(x) {
        $scope.myOrderBy = x;
       }
-	  
+
 	document.getElementById("toggleDiv").style.display = "none";
-		
+
 	$scope.viewdata = function () {
        var x = document.getElementById("toggleDiv");
-       if(x.style.display === "none")
+       if(x.style.display == "none")
         { var psw = prompt("Enter the password : ");
 		if(psw=="xyz"){
 		x.style.display = "block";
 		var y = document.getElementById("closeview");
 		y.value="Close View";}
 		else{alert("wrong password!");}}
-       else {x.style.display = "none"};
-    }	   
-	
+       else {x.style.display = "none"
+       var y = document.getElementById("closeview");
+   		y.value="View";};
+    }
+
 	$scope.userinstruct = function()
 	{
 	  alert(" ADD DATA : enter data and click save. TO VIEW DB : Click View, password : 'xyz'. TO UPDATE : click select from view, change details, click update. TO SORT BY name/college, click name/college button in view. Use search bar to narrow down options. ");
 		}
-		
+
 		});
